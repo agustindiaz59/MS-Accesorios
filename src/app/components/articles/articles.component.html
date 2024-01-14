@@ -1,0 +1,62 @@
+<!-- Articulos -->
+<main class="d-flex">
+
+  <!-- Filtros activos -->
+    <aside class=" mt-5 ms-3">
+        <div class="list-group lst">
+            <b class="list-group-item list-group-item-action" style="cursor: default;">Filtrar por: </b>
+            <a class="list-group-item list-group-item-action" (click)="this.actualizarArticulos()">Todo</a>
+            <a class="list-group-item list-group-item-action" (click)="filtrar('Pulceras')">Pulceras</a>
+            <a class="list-group-item list-group-item-action" (click)="filtrar('Gargantillas')">Gargantillas</a>
+            <a class="list-group-item list-group-item-action" (click)="filtrar('Anillos')">Anillos</a>
+            <a class="list-group-item list-group-item-action" (click)="filtrar('Cadenas')">Cadenas</a>
+            <div class="dropdown list-group-item">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Precio
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" (click)="filtrar(undefined,0,100)">0 ---- $100</a></li>
+                <li><a class="dropdown-item" (click)="filtrar(undefined,100,500)">$100 ---- $500</a></li>
+                <li><a class="dropdown-item" (click)="filtrar(undefined,500,1000)">$500 ---- $1000</a></li>
+                <li><a class="dropdown-item" (click)="filtrar(undefined,1000,3000)">$1000 ---- $3000</a></li>
+
+              </ul>
+            </div>
+          </div>
+    </aside>
+
+    <section class="container-sm">
+        <div class="row">
+            <!-- Productos disponibles -->
+            <article *ngFor="let a of this.articulos" class="col-3 prod">
+                <a href="">
+                    <figure class="card">
+                        <img class="card-img-top" [src]="a.pathFoto">
+                        <figcaption class="card-body text-center">
+                            <h6 class="card-title">{{a.nombre}}</h6>
+                            <p>{{a.categoria}}</p>
+                            <b>${{a.precio}}</b>
+                        </figcaption>
+                    </figure>
+                </a>
+            </article>
+        </div>
+    </section>  
+</main>
+
+    <!-- Paginacion -->
+    <nav class="d-flex justify-content-center" aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous" (click)="actualizarpagina(paginaActual - 1)">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li *ngFor="let i of paginas" class="page-item"><a class="page-link" href="#" (click)="actualizarpagina(i)">{{i}}</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next" (click)="actualizarpagina(paginaActual + 1)">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+    </nav>

@@ -1,0 +1,98 @@
+[
+    {
+        "pathFoto": "../assets/20231001_095507.jpg",
+        "nombre": "Pulcera Bob Esponja",
+        "categoria": "Pulceras",
+        "precio": 1200
+    },
+    {
+        "pathFoto": "../assets/20231011_110559.jpg",
+        "nombre": "",
+        "categoria": "Cadenas",
+        "precio": 500
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "Anillos",
+        "precio": 3000
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": 2500
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": 1500
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": ""
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": ""
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": ""
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": ""
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": ""
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": ""
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": ""
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": ""
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": ""
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": ""
+    },
+    {
+        "pathFoto": "../assets/20230313_175139.jpg",
+        "nombre": "",
+        "categoria": "",
+        "precio": ""
+    }
+]

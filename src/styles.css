@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+ul,ol{
+    list-style-type: none;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.producto{
+    width: 25vw;
+}
+.logo{
+    width: 10vw;
+}
+.banner{
+    max-height: 70vh;
+}
+a:hover {
+    text-decoration: none; /* Eliminar subrayado */
+    color: inherit; /* Mantener el color original del texto */
+    /* Agrega cualquier otro estilo que desees eliminar o modificar */
+    cursor: default;
+  }
+@media (max-width: 540px){
+    .prod{
+        min-width: 50%;
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ms-accesorios": {
+      "hosting": {
+        "ms-accesorios": [
+          "ms-accesorios"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ms-accesorios"
+  }
+}
