@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ArticlesService } from '../../services/articles.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { articulo } from '../../models/articulo.interface';
-import { HttpClientModule } from '@angular/common/http';
+import { ArticlesService } from '../../services/articles.service';
+import { FiltersService } from '../../services/filters.service';
 
 @Component({
   selector: 'app-articles',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
-  providers:[ArticlesService],
+  imports: [CommonModule,HttpClientModule],
+  providers:[ArticlesService, FiltersService],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.css'
 })
@@ -18,34 +19,44 @@ export class ArticlesComponent {
   protected paginas : number[] = [];
   protected paginaActual : number = 1;
 
-  constructor(protected articuloService : ArticlesService){
-    setTimeout(()=>{
-      this.articulos = this.articuloService.actualizarArticulos();
-      this.paginas = this.articuloService.getPaginas();
-      console.log("constructor de component",this.articulos)
-    },500);
+  constructor( private articulosService : ArticlesService, protected filtros : FiltersService){
+    this.actualizarArticulos();
+  }
+  //Actualizar los articulos segun la pagina, metodo asincrono
+  protected actualizarArticulos():void{
+    this.articulosService.getProductos().subscribe(
+      (data)=>{ 
+        this.articulos = this.articulosService.paginar(data, 4, this.paginaActual); //Toma solo los primeros 16 resultados
+        this.separarPaginas(data);
+      });
+  }
+  //Actualizar la pagina por los numeros de paginacion
+  protected actualizarpagina(pagina : number):void{
+    this.paginaActual = pagina;
+    this.actualizarArticulos();
+  }
+  //Filtrar los articulos por categoria o por precio, ordena la lista
+  protected filtrar(categoria? : string, precioMin? : number, precioMax? : number) : void{
+    this.articulosService.getProductos().subscribe(
+      (data) => {
+        this.paginas = []
+        if(categoria !== undefined) this.articulos = data.filter((art) => art.categoria === categoria);
+        else if(precioMin !== undefined && precioMax !== undefined){
+          this.articulos = data.filter((art) => art.precio >= precioMin && art.precio <= precioMax);
+          this.articulos.sort(
+            (a: articulo, b: articulo) => { return a.precio - b.precio }
+          );
+        }
+      }
+    )
 
   }
-
-  actualizarArticulos(): void {
-    this.paginas = this.articuloService.getPaginas();
-    this.articulos = this.articuloService.actualizarArticulos();
-    console.log("aArt de component",this.articulos)
-
-  }
-
-  filtrar(categoria? : string | undefined, precioMin? : number, precioMax? : number) : void{
-    this.paginas = this.articuloService.getPaginas();
-    this.articuloService.filtrar(categoria, precioMin, precioMax);
-    this.articulos = this.articuloService.getArticulos();
+  //Separa el array en paginas de 4
+  private separarPaginas(data :articulo[]){
+    this.paginas = [];
+        for(let i = 0; i < this.articulosService.contarPaginas(data, 4); i++){
+          this.paginas.push( i + 1 ); 
+        }
   }
   
-  actualizarpagina(pagina : number){
-    console.log("apag de component",this.articulos)
-
-    this.paginas = this.articuloService.getPaginas();
-    this.articuloService.actualizarpagina(pagina);
-    this.articulos = this.articuloService.getArticulos();
-    
-  }
 }

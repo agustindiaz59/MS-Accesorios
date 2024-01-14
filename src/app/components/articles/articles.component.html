@@ -48,13 +48,13 @@
     <nav class="d-flex justify-content-center" aria-label="Page navigation example">
         <ul class="pagination">
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous" (click)="actualizarpagina(paginaActual - 1)">
+            <a class="page-link" aria-label="Previous" (click)="actualizarpagina(paginaActual - 1)">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
-          <li *ngFor="let i of paginas" class="page-item"><a class="page-link" href="#" (click)="actualizarpagina(i)">{{i}}</a></li>
+          <li *ngFor="let i of paginas" class="page-item"><a class="page-link" (click)="actualizarpagina(i)">{{i}}</a></li>
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next" (click)="actualizarpagina(paginaActual + 1)">
+            <a class="page-link" aria-label="Next" (click)="actualizarpagina(paginaActual + 1)">
               <span aria-hidden="true">&raquo;</span>
             </a>
           </li>
