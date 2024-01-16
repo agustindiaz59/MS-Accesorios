@@ -7,92 +7,56 @@
     },
     {
         "pathFoto": "../assets/20231011_110559.jpg",
-        "nombre": "",
+        "nombre": "asd",
         "categoria": "Cadenas",
         "precio": 500
     },
     {
         "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
+        "nombre": "asd",
         "categoria": "Anillos",
         "precio": 3000
     },
     {
         "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
+        "nombre": "gfb",
+        "categoria": "ghn",
         "precio": 2500
     },
     {
         "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
+        "nombre": "ds",
+        "categoria": "ynj",
         "precio": 1500
     },
     {
-        "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
-        "precio": ""
+        "pathFoto": "../assets/20231001_095507.jpg",
+        "nombre": "Pulcera Bob Esponja",
+        "categoria": "Pulceras",
+        "precio": 1200
+    },
+    {
+        "pathFoto": "../assets/20231011_110559.jpg",
+        "nombre": "asd",
+        "categoria": "Cadenas",
+        "precio": 500
     },
     {
         "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
-        "precio": ""
+        "nombre": "asd",
+        "categoria": "Anillos",
+        "precio": 3000
     },
     {
         "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
-        "precio": ""
+        "nombre": "gfb",
+        "categoria": "ghn",
+        "precio": 2500
     },
     {
         "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
-        "precio": ""
-    },
-    {
-        "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
-        "precio": ""
-    },
-    {
-        "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
-        "precio": ""
-    },
-    {
-        "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
-        "precio": ""
-    },
-    {
-        "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
-        "precio": ""
-    },
-    {
-        "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
-        "precio": ""
-    },
-    {
-        "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
-        "precio": ""
-    },
-    {
-        "pathFoto": "../assets/20230313_175139.jpg",
-        "nombre": "",
-        "categoria": "",
-        "precio": ""
+        "nombre": "ds",
+        "categoria": "ynj",
+        "precio": 1500
     }
 ]

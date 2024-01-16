@@ -1,24 +1,24 @@
 <!-- Articulos -->
-<main class="d-flex">
+<main *ngIf="articulos.length !== 0" class="d-flex">
 
   <!-- Filtros activos -->
     <aside class=" mt-5 ms-3">
         <div class="list-group lst">
             <b class="list-group-item list-group-item-action" style="cursor: default;">Filtrar por: </b>
-            <a class="list-group-item list-group-item-action" (click)="this.actualizarArticulos()">Todo</a>
-            <a class="list-group-item list-group-item-action" (click)="filtrar('Pulceras')">Pulceras</a>
-            <a class="list-group-item list-group-item-action" (click)="filtrar('Gargantillas')">Gargantillas</a>
-            <a class="list-group-item list-group-item-action" (click)="filtrar('Anillos')">Anillos</a>
-            <a class="list-group-item list-group-item-action" (click)="filtrar('Cadenas')">Cadenas</a>
+            <a class="list-group-item list-group-item-action" (click)="this.actualizarTodo()">Todo</a>
+            <a class="list-group-item list-group-item-action" (click)="this.actualizarArticulos(1,'Pulceras')">Pulceras</a>
+            <a class="list-group-item list-group-item-action" (click)="this.actualizarArticulos(1,'Gargantillas')">Gargantillas</a>
+            <a class="list-group-item list-group-item-action" (click)="this.actualizarArticulos(1,'Anillos')">Anillos</a>
+            <a class="list-group-item list-group-item-action" (click)="this.actualizarArticulos(1,'Cadenas')">Cadenas</a>
             <div class="dropdown list-group-item">
               <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Precio
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" (click)="filtrar(undefined,0,100)">0 ---- $100</a></li>
-                <li><a class="dropdown-item" (click)="filtrar(undefined,100,500)">$100 ---- $500</a></li>
-                <li><a class="dropdown-item" (click)="filtrar(undefined,500,1000)">$500 ---- $1000</a></li>
-                <li><a class="dropdown-item" (click)="filtrar(undefined,1000,3000)">$1000 ---- $3000</a></li>
+                <li><a class="dropdown-item" (click)="this.articulosService.getPagina(1,undefined,0,100)">0 ---- $100</a></li>
+                <li><a class="dropdown-item" (click)="this.articulosService.getPagina(1,undefined,0,100)">$100 ---- $500</a></li>
+                <li><a class="dropdown-item" (click)="this.articulosService.getPagina(1,undefined,0,100)">$500 ---- $1000</a></li>
+                <li><a class="dropdown-item" (click)="this.articulosService.getPagina(1,undefined,0,100)">$1000 ---- $3000</a></li>
 
               </ul>
             </div>
@@ -48,13 +48,13 @@
     <nav class="d-flex justify-content-center" aria-label="Page navigation example">
         <ul class="pagination">
           <li class="page-item">
-            <a class="page-link" aria-label="Previous" (click)="actualizarpagina(paginaActual - 1)">
+            <a class="page-link" aria-label="Previous" (click)="actualizarArticulos(pagina - 1)">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
-          <li *ngFor="let i of paginas" class="page-item"><a class="page-link" (click)="actualizarpagina(i)">{{i}}</a></li>
+          <li *ngFor="let i of cantPaginas" class="page-item"><a class="page-link" (click)="actualizarArticulos(i)">{{i}}</a></li>
           <li class="page-item">
-            <a class="page-link" aria-label="Next" (click)="actualizarpagina(paginaActual + 1)">
+            <a class="page-link" aria-label="Next" (click)="actualizarArticulos(pagina + 1)">
               <span aria-hidden="true">&raquo;</span>
             </a>
           </li>
