@@ -23,14 +23,16 @@
     "bootstrap": "4.0",
     "firebase": "^10.7.1",
     "ngx-bootstrap": "^12.0.0",
+    "ngx-filter-pipe": "^2.1.2",
     "ngx-pagination": "^6.0.3",
+    "ngx-pipes": "^3.2.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.9",
-    "@angular/cli": "^17.0.9",
+    "@angular/cli": "^12.2.18",
     "@angular/compiler-cli": "^17.0.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",

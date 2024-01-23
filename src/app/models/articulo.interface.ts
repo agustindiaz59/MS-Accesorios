@@ -1,6 +1,6 @@
-export interface articulo{
-    pathFoto : string;
-    nombre : string;
-    categoria : string;
-    precio : number;
+export class articulo{
+    public pathFoto : string = "";
+    public nombre : string = "";
+    public categoria : string = "";
+    public precio : number = 0;
 }

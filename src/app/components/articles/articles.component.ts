@@ -1,45 +1,56 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { articulo } from '../../models/articulo.interface';
 import { ArticlesService } from '../../services/articles.service';
-import { FiltersService } from '../../services/filters.service';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { NgPipesModule } from 'ngx-pipes';
 
 @Component({
   selector: 'app-articles',
   standalone: true,
-  imports: [CommonModule,HttpClientModule],
-  providers:[ArticlesService, FiltersService],
+  imports: [CommonModule,HttpClientModule,NgxPaginationModule, NgPipesModule],
+  providers:[ArticlesService],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.css'
 })
 
-export class ArticlesComponent {
+export class ArticlesComponent implements OnInit{
+  //Variables de paginacion
+  protected p = 1;
+  protected tamPage : number = 12;
   protected articulos : articulo[] = [];
-  protected cantPaginas : number[] = [1];
-  protected pagina : number = 1;
+  //Variables del filtro
+  protected filtroKey : string[] = [];
+  protected filtroActivo : string[] = [];
 
-  constructor( protected articulosService : ArticlesService){
-    //Primero los productos y despues as paginas
-    this.articulos = articulosService.getPagina(1);
-    this.cantPaginas = articulosService.getCantPaginas();
+  constructor(protected articulosService : ArticlesService){}
+  
+  ngOnInit(): void {
+    this.articulosService.getArticulos().subscribe(
+      data => {
+        this.articulos = data
+        this.traerTodo()
+      }
+    )
   }
-  protected actualizarArticulos(
-    pagina : number,
-    categoria? : string | undefined,
-    precioMin? : number | undefined, 
-    precioMax? : number | undefined
-    ){
-    this.articulos = this.articulosService.getPagina(pagina, categoria, precioMin, precioMax);
-    this.cantPaginas = this.articulosService.getCantPaginas();
-  }
+;
 
-  protected actualizarTodo(){
-    this.articulos = this.articulosService.getAllProducts();
-    this.cantPaginas = this.articulosService.getCantPaginas();
-  }
+  protected traerTodo(): void{
+    this.articulosService.traerTodo();
+    this.filtroKey = this.articulosService.getFiltroKey();
+    this.filtroActivo = this.articulosService.getFiltroActivo();
+  };
 
-  protected actualizarPagina(){
+  protected filtrarPorCategoria(value: string): void{
+    this.articulosService.filtrarPorCategoria(value);
+    this.filtroKey = this.articulosService.getFiltroKey();
+    this.filtroActivo = this.articulosService.getFiltroActivo();
+  };
 
+  protected filtrarPorPrecio(precioMin : number, precioMax : number): void{
+    this.articulosService.filtrarPorPrecio(precioMin, precioMax);
+    this.filtroKey = this.articulosService.getFiltroKey();
+    this.filtroActivo = this.articulosService.getFiltroActivo();
   }
-}
+};

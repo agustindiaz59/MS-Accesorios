@@ -1,34 +1,67 @@
-<!-- Articulos -->
-<main *ngIf="articulos.length !== 0" class="d-flex">
 
-  <!-- Filtros activos -->
-    <aside class=" mt-5 ms-3">
+<!--filtros version de movil-->
+<div class="dropdown movil d-flex justify-content-around mb-3">
+      <div></div>
+      <div></div>
+      <div></div>
+    
+      <a class="btn movil dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Filtrar por
+      </a>
+      <ul class="dropdown-menu">
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" (click)="traerTodo()">Mostrar todo</a></li>
+        <li><hr class="dropdown-divider"></li>
+    
+        <li><a class="dropdown-item" style="cursor: default;"><b>Categoria:</b></a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorCategoria('Pulceras')">Pulceras</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorCategoria('Gargantillas')">Gargantillas</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorCategoria('Anillos')">Anillos</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorCategoria('Cadenas')">Cadenas</a></li>
+        <li><hr class="dropdown-divider"></li>
+    
+        <li><a class="dropdown-item" style="cursor: default;"><b>Precio:</b></a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorPrecio(0,100)"> 0 ---- $100</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorPrecio(100,500)"> $100 ---- $500</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorPrecio(500,1000)">  $500 ---- $1000</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorPrecio(1000,3000)"> $1000 ---- $3000</a></li>
+      </ul>
+</div>
+<main class="d-flex">
+
+  <!-- Filtros activos --> 
+    <!--Version de escritorio-->
+    <aside class=" mt-5 ms-3 escritorio">
         <div class="list-group lst">
             <b class="list-group-item list-group-item-action" style="cursor: default;">Filtrar por: </b>
-            <a class="list-group-item list-group-item-action" (click)="this.actualizarTodo()">Todo</a>
-            <a class="list-group-item list-group-item-action" (click)="this.actualizarArticulos(1,'Pulceras')">Pulceras</a>
-            <a class="list-group-item list-group-item-action" (click)="this.actualizarArticulos(1,'Gargantillas')">Gargantillas</a>
-            <a class="list-group-item list-group-item-action" (click)="this.actualizarArticulos(1,'Anillos')">Anillos</a>
-            <a class="list-group-item list-group-item-action" (click)="this.actualizarArticulos(1,'Cadenas')">Cadenas</a>
+            <a class="list-group-item list-group-item-action" (click)="traerTodo()">Todo</a>
+            <a class="list-group-item list-group-item-action" (click)="filtrarPorCategoria('Pulceras')">Pulceras</a>
+            <a class="list-group-item list-group-item-action" (click)="filtrarPorCategoria('Gargantillas')">Gargantillas</a>
+            <a class="list-group-item list-group-item-action" (click)="filtrarPorCategoria('Anillos')">Anillos</a>
+            <a class="list-group-item list-group-item-action" (click)="filtrarPorCategoria('Cadenas')">Cadenas</a>
+            
+            <!--Filtrar por precios-->
             <div class="dropdown list-group-item">
               <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Precio
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" (click)="this.articulosService.getPagina(1,undefined,0,100)">0 ---- $100</a></li>
-                <li><a class="dropdown-item" (click)="this.articulosService.getPagina(1,undefined,0,100)">$100 ---- $500</a></li>
-                <li><a class="dropdown-item" (click)="this.articulosService.getPagina(1,undefined,0,100)">$500 ---- $1000</a></li>
-                <li><a class="dropdown-item" (click)="this.articulosService.getPagina(1,undefined,0,100)">$1000 ---- $3000</a></li>
+                <li><a class="dropdown-item" (click)="filtrarPorPrecio(0,100)">0 ---- $100</a></li>
+                <li><a class="dropdown-item" (click)="filtrarPorPrecio(100,500)">$100 ---- $500</a></li>
+                <li><a class="dropdown-item" (click)="filtrarPorPrecio(500,1000)">$500 ---- $1000</a></li>
+                <li><a class="dropdown-item" (click)="filtrarPorPrecio(1000,3000)">$1000 ---- $3000</a></li>
 
               </ul>
             </div>
+          
           </div>
     </aside>
+    
 
-    <section class="container-sm">
+    <section *ngIf="articulos.length !== 0" class="container-sm">
         <div class="row">
             <!-- Productos disponibles -->
-            <article *ngFor="let a of this.articulos" class="col-3 prod">
+            <article  *ngFor="let a of this.articulos | filterBy: this.filtroKey : this.filtroActivo : true | paginate: {itemsPerPage: this.tamPage, currentPage: this.p} " class="col-3 prod">
                 <a href="">
                     <figure class="card">
                         <img class="card-img-top" [src]="a.pathFoto">
@@ -40,23 +73,26 @@
                     </figure>
                 </a>
             </article>
+          </div>
+    </section> 
+
+    <!--Error de lista vacia --> 
+    <section *ngIf="articulos.length === 0" class="container-sm">
+      <div class="row">
+        <div class="col">
+          <div class="error">
+            <div class="error__icon">
+                <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z" fill="#393a37"></path></svg>
+            </div>
+            <div class="error__title">Lo sentimos, no hay productos disponibles para mostrar</div>
+          </div>
         </div>
-    </section>  
+      </div>
+    </section>
 </main>
 
-    <!-- Paginacion -->
-    <nav class="d-flex justify-content-center" aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" aria-label="Previous" (click)="actualizarArticulos(pagina - 1)">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li *ngFor="let i of cantPaginas" class="page-item"><a class="page-link" (click)="actualizarArticulos(i)">{{i}}</a></li>
-          <li class="page-item">
-            <a class="page-link" aria-label="Next" (click)="actualizarArticulos(pagina + 1)">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-    </nav>
+<section *ngIf="articulos.length !== 0" class="container-sm movil">
+  
+</section>
+
+<pagination-controls style="text-align: center;" (pageChange)="p = $event" nextLabel="Siguiente" previousLabel="Anterior"></pagination-controls>
