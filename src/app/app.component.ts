@@ -4,9 +4,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { NavigatorComponent } from './components/navigator/navigator.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { ArticlesComponent } from './components/articles/articles.component';
-import { PaginationComponent } from './components/pagination/pagination.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ArticlesService } from './services/articles.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +15,6 @@ import { ArticlesService } from './services/articles.service';
     NavigatorComponent, 
     BannerComponent,
     ArticlesComponent,
-    PaginationComponent,
     FooterComponent
   ],
   templateUrl: './app.component.html',

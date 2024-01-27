@@ -5,7 +5,6 @@ import { ArticlesComponent } from '../articles/articles.component';
 import { BannerComponent } from '../banner/banner.component';
 import { FooterComponent } from '../footer/footer.component';
 import { NavigatorComponent } from '../navigator/navigator.component';
-import { PaginationComponent } from '../pagination/pagination.component';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +15,6 @@ import { PaginationComponent } from '../pagination/pagination.component';
     NavigatorComponent, 
     BannerComponent,
     ArticlesComponent,
-    PaginationComponent,
     FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

@@ -3,4 +3,5 @@ export class articulo{
     public nombre : string = "";
     public categoria : string = "";
     public precio : number = 0;
+    constructor(){}
 }

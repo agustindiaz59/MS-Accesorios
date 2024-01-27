@@ -1,10 +1,6 @@
 
 <!--filtros version de movil-->
-<div class="dropdown movil d-flex justify-content-around mb-3">
-      <div></div>
-      <div></div>
-      <div></div>
-    
+<div class="dropdown movil d-flex justify-content-around mb-1">
       <a class="btn movil dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Filtrar por
       </a>
@@ -26,6 +22,10 @@
         <li><a class="dropdown-item" (click)="filtrarPorPrecio(500,1000)">  $500 ---- $1000</a></li>
         <li><a class="dropdown-item" (click)="filtrarPorPrecio(1000,3000)"> $1000 ---- $3000</a></li>
       </ul>
+      <div></div>
+      <div></div>
+      <div></div>
+    
 </div>
 <main class="d-flex">
 
@@ -57,12 +57,11 @@
           </div>
     </aside>
     
-
     <section *ngIf="articulos.length !== 0" class="container-sm">
         <div class="row">
             <!-- Productos disponibles -->
             <article  *ngFor="let a of this.articulos | filterBy: this.filtroKey : this.filtroActivo : true | paginate: {itemsPerPage: this.tamPage, currentPage: this.p} " class="col-3 prod">
-                <a href="">
+                <a (click)="router.navigate(['producto/' + this.articulos.indexOf(a)])">
                     <figure class="card">
                         <img class="card-img-top" [src]="a.pathFoto">
                         <figcaption class="card-body text-center">

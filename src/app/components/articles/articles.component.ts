@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { articulo } from '../../models/articulo.interface';
 import { ArticlesService } from '../../services/articles.service';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgPipesModule } from 'ngx-pipes';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-articles',
   standalone: true,
-  imports: [CommonModule,HttpClientModule,NgxPaginationModule, NgPipesModule],
+  imports: [CommonModule,HttpClientModule,NgxPaginationModule, NgPipesModule, RouterModule],
   providers:[ArticlesService],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.css'
@@ -24,7 +25,7 @@ export class ArticlesComponent implements OnInit{
   protected filtroKey : string[] = [];
   protected filtroActivo : string[] = [];
 
-  constructor(protected articulosService : ArticlesService){}
+  constructor(protected articulosService : ArticlesService, protected router : Router){}
   
   ngOnInit(): void {
     this.articulosService.getArticulos().subscribe(
@@ -33,8 +34,7 @@ export class ArticlesComponent implements OnInit{
         this.traerTodo()
       }
     )
-  }
-;
+  };
 
   protected traerTodo(): void{
     this.articulosService.traerTodo();

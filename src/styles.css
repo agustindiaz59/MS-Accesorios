@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-
+body{
+    font-family: "Gluten", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
 .centrado{
     position: absolute;
     top: 50%;
@@ -23,12 +30,6 @@ ul,ol{
 .banner{
     max-height: 70vh;
 }
-a:hover {
-    text-decoration: none; /* Eliminar subrayado */
-    color: inherit; /* Mantener el color original del texto */
-    /* Agrega cualquier otro estilo que desees eliminar o modificar */
-    cursor: default;
-  }
 @media (max-width: 540px){
     .prod{
         min-width: 50%;

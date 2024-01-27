@@ -10,10 +10,17 @@ export class ArticlesService {
   private jsonUrl = 'assets/articulos.json'; // Ajusta la ruta según la ubicación de tu archivo JSON
   private filtroKey : string[] = [];
   private filtroActivo : string[] = [];
+  public articulos : articulo[] = [];
 
-  constructor(private http : HttpClient){};
+  constructor(private http : HttpClient){
+    this.getArticulos().subscribe(
+      data => {
+        this.articulos = data
+      }
+    )
+  };
 
-  public getArticulos() : Observable<articulo[]>{
+  public getArticulos(): Observable<articulo[]>{
     console.log("Consultando http")
     return this.http.get<articulo[]>(this.jsonUrl)
   }

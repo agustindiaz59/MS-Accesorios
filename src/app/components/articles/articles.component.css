@@ -38,6 +38,13 @@
   .error__close path {
     fill: #71192F;
   }
+  
+a:hover {
+  text-decoration: none; /* Eliminar subrayado */
+  color: inherit; /* Mantener el color original del texto */
+  /* Agrega cualquier otro estilo que desees eliminar o modificar */
+  cursor: pointer;
+}
 
 @media(min-width: 1080px) {
   .escritorio{
