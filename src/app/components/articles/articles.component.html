@@ -61,7 +61,7 @@
         <div class="row">
             <!-- Productos disponibles -->
             <article  *ngFor="let a of this.articulos | filterBy: this.filtroKey : this.filtroActivo : true | paginate: {itemsPerPage: this.tamPage, currentPage: this.p} " class="col-3 prod">
-                <a (click)="router.navigate(['producto/' + this.articulos.indexOf(a)])">
+                <a [routerLink]="'/producto/'+ this.articulos.indexOf(a)">
                     <figure class="card">
                         <img class="card-img-top" [src]="a.pathFoto">
                         <figcaption class="card-body text-center">
@@ -89,9 +89,5 @@
       </div>
     </section>
 </main>
-
-<section *ngIf="articulos.length !== 0" class="container-sm movil">
-  
-</section>
 
 <pagination-controls style="text-align: center;" (pageChange)="p = $event" nextLabel="Siguiente" previousLabel="Anterior"></pagination-controls>

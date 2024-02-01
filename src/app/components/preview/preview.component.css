@@ -1,0 +1,16 @@
+@media(min-width: 1080px) {
+    .escritorio{
+      display: block;
+    }
+    .movil{
+      display: none;
+    }
+  }
+  @media(max-width: 1081px) {
+    .escritorio{
+      display: none;
+    }
+    .movil{
+      display: block;
+    }
+  }
