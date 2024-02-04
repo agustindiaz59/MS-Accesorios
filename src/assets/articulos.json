@@ -8,6 +8,12 @@
         {
             "pathFoto": "../assets/20231011_110559.jpg",
             "nombre": "asd",
+            "categoria": "abcdef",
+            "precio": 500
+        },
+        {
+            "pathFoto": "../assets/20231011_110559.jpg",
+            "nombre": "asd",
             "categoria": "Cadenas",
             "precio": 500
         },{

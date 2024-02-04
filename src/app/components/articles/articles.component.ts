@@ -6,6 +6,8 @@ import { ArticlesService } from '../../services/articles.service';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgPipesModule } from 'ngx-pipes';
 import { Router, RouterModule } from '@angular/router';
+import { categorias } from '../../models/categorias';
+import { Inject } from '@angular/core';
 
 @Component({
   selector: 'app-articles',
@@ -24,13 +26,18 @@ export class ArticlesComponent implements OnInit{
   //Variables del filtro
   protected filtroKey : string[] = [];
   protected filtroActivo : string[] = [];
+  protected categorias : string[] = categorias;
 
-  constructor(protected articulosService : ArticlesService, protected router : Router){}
+  constructor(@Inject(ArticlesService) protected articulosService : ArticlesService, protected router : Router){}
   
   ngOnInit(): void {
     this.articulosService.getArticulos().subscribe(
       data => {
         this.articulos = data
+        data.forEach( 
+          (a)=>{
+            if(!categorias.includes(a.categoria)) categorias.push(a.categoria)
+          })
         this.traerTodo()
       }
     )

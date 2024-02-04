@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { articulo } from '../models/articulo.interface';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
+import { categorias } from '../models/categorias';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,10 @@ export class ArticlesService {
     this.getArticulos().subscribe(
       data => {
         this.articulos = data
+        data.forEach( 
+          (a)=>{
+            if(!categorias.includes(a.categoria)) categorias.push(a.categoria)
+          })
       }
     )
   };
@@ -35,13 +40,9 @@ export class ArticlesService {
   
   public traerTodo(): void{
     this.filtroKey = []
-    this.filtroKey.push("categoria");
-    
-    this.filtroActivo = [];
-    this.filtroActivo.push("Pulceras")
-    this.filtroActivo.push("Anillos")
-    this.filtroActivo.push("Cadenas")
-    this.filtroActivo.push("Gargantillas")
+    this.filtroKey.push('categoria')
+    this.filtroActivo = []
+    this.filtroActivo = categorias
   };
 
   public filtrarPorCategoria(value: string): void{
