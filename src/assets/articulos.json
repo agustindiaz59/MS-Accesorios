@@ -1,194 +1,75 @@
 [
-        {
-            "pathFoto": "../assets/20231001_095507.jpg",
-            "nombre": "Pulcera Bob Esponja",
-            "categoria": "Pulceras",
-            "precio": 1200
-        },
-        {
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "abcdef",
-            "precio": 500
-        },
-        {
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },{
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },
-        {
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 900
-        },
-        {
-            "pathFoto": "../assets/20230313_175139.jpg",
-            "nombre": "asd",
-            "categoria": "Anillos",
-            "precio": 3000
-        },
-        {
-            "pathFoto": "../assets/20230313_175139.jpg",
-            "nombre": "gfb",
-            "categoria": "ghn",
-            "precio": 2500
-        },
-        {
-            "pathFoto": "../assets/20230313_175139.jpg",
-            "nombre": "ds",
-            "categoria": "ynj",
-            "precio": 1500
-        },
-        {
-            "pathFoto": "../assets/20231001_095507.jpg",
-            "nombre": "Pulcera Bob Esponja",
-            "categoria": "Pulceras",
-            "precio": 1200
-        },
-        {
-            "pathFoto": "../assets/20231011_110559.jpg",
-            "nombre": "asd",
-            "categoria": "Cadenas",
-            "precio": 500
-        },
-        {
-            "pathFoto": "../assets/20230313_175139.jpg",
-            "nombre": "asd",
-            "categoria": "Anillos",
-            "precio": 3000
-        },
-        {
-            "pathFoto": "../assets/20230313_175139.jpg",
-            "nombre": "gfb",
-            "categoria": "ghn",
-            "precio": 2500
-        },
-        {
-            "pathFoto": "../assets/20230313_175139.jpg",
-            "nombre": "ds",
-            "categoria": "ynj",
-            "precio": 1500
-        }
-    ]
+    {
+        "pathFoto": "../assets/articulos/20231001_095507.jpg",
+        "nombre": "Pulcera Bob Esponja",
+        "categoria": "Pulceras",
+        "descripcion": "Exclusivas para esa/e amiga/o incondicional 🫂❤️",
+        "precio": 1200
+    },
+    {
+        "pathFoto": "../assets/articulos/20231011_110559.jpg",
+        "nombre": "Iniciales blanco y negro",
+        "categoria": "Para compartir",
+        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "precio": 1500,
+        "stock": false
+    },
+    {
+        "pathFoto": "../assets/articulos/20230313_175139.jpg",
+        "nombre": "Gargantilla corazón",
+        "categoria": "Gargantillas",
+        "descripcion": "",
+        "precio": 1200,
+        "stock": true
+    },
+    {
+        "pathFoto": "../assets/articulos/20230313_175402.jpg",
+        "nombre": "Collar de caracoles",
+        "categoria": "Collares",
+        "precio": 2500,
+        "stock": true
+    },
+    {
+        "pathFoto": "../assets/articulos/20230313_175535.jpg",
+        "nombre": "Gargantilla de perlas multicolor",
+        "categoria": "Gargantillas",
+        "precio": 900,
+        "stock": true
+    },
+    {
+        "pathFoto": "../assets/articulos/20230719_224520.jpg",
+        "nombre": "Rojas de corazón",
+        "categoria": "Para compartir",
+        "precio": 1500,
+        "stock": true
+    },
+    {
+        "pathFoto": "../assets/articulos/20230823_151242.jpg",
+        "nombre": "Corazon de perlas madre e hija",
+        "categoria": "Para compartir",
+        "precio": 2000,
+        "stock": false
+    },
+    {
+        "pathFoto": "../assets/articulos/20230828_143738.jpg",
+        "nombre": "Pulceras negras de corazón",
+        "categoria": "Para compartir",
+        "precio": 1500,
+        "stock": false
+    },
+    {
+        "pathFoto": "../assets/articulos/20230928_160829.jpg",
+        "nombre": "Pulceras de voley",
+        "categoria": "Para compartir",
+        "descripcion": "Ideales para compartir con tu jugador/a favorito ☺️",
+        "precio": 1800,
+        "stock": false
+    },
+    {
+        "pathFoto": "../assets/articulos/20231016_154812.jpg",
+        "nombre": "Pulceras de corazon negro y rojo",
+        "categoria": "Para compartir",
+        "precio": 1500,
+        "stock": false
+    }
+]

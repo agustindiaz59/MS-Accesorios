@@ -5,6 +5,7 @@ import { ArticlesComponent } from '../articles/articles.component';
 import { BannerComponent } from '../banner/banner.component';
 import { FooterComponent } from '../footer/footer.component';
 import { NavigatorComponent } from '../navigator/navigator.component';
+import { WarningComponent } from '../warning/warning.component';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,9 @@ import { NavigatorComponent } from '../navigator/navigator.component';
     NavigatorComponent, 
     BannerComponent,
     ArticlesComponent,
-    FooterComponent],
+    FooterComponent,
+    WarningComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

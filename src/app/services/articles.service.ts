@@ -28,15 +28,15 @@ export class ArticlesService {
   public getArticulos(): Observable<articulo[]>{
     console.log("Consultando http")
     return this.http.get<articulo[]>(this.jsonUrl)
-  }
+  };
 
   public getFiltroKey(): string[]{
     return this.filtroKey;
-  }
+  };
 
   public getFiltroActivo(): string[]{
     return this.filtroActivo;
-  }
+  };
   
   public traerTodo(): void{
     this.filtroKey = []
