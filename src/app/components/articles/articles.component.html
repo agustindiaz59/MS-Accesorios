@@ -29,7 +29,7 @@
   <aside class=" mt-5 ms-3 escritorio">
     <div class="list-group lst">
       <b class="list-group-item list-group-item-action" style="cursor: default;">Filtrar por: </b>
-      <a class="list-group-item list-group-item-action" (click)="traerTodo();categorias">Todo</a>
+      <a class="list-group-item list-group-item-action" (click)="traerTodo()">Mostrar todo</a>
 
       <b class="list-group-item list-group-item-action">Categoria:</b>
       <div *ngFor="let categoria of categorias">
@@ -50,37 +50,23 @@
     </div>
   </aside>
     
-  <section *ngIf="articulos.length !== 0" class="container-sm">
+  <section class="container-sm">
     <div class="row">
       <!-- Productos disponibles -->
-      <article  *ngFor="let a of this.articulos | filterBy: this.filtroKey : this.filtroActivo : true | paginate: {itemsPerPage: this.tamPage, currentPage: this.p} " class="col-3 prod">
-        <a [routerLink]="'/producto/'+ this.articulos.indexOf(a)">
+      <article  *ngFor="let a of this.articulosService.articulos | filterBy: this.articulosService.filtroKey : this.articulosService.filtroActivo : true| filterBy: ['stock']:[true]| unique: 'nombre' | paginate: {itemsPerPage: this.tamPage, currentPage: this.p}" class="col-3 prod">
+        <a [routerLink]="'/producto/'+ this.articulosService.articulos.indexOf(a)">
           <figure class="card">
-            <img class="card-img-top" [src]="a.pathFoto">
+            <img class="card-img-top" [src]="a.fotos[0]">
               <figcaption class="card-body text-center">
                 <h6 class="card-title">{{a.nombre}}</h6>
-                <p>{{a.categoria}}</p>
                 <b>${{a.precio}}</b>
-              </figcaption>
+              </figcaption> 
           </figure>
         </a>
       </article>
     </div>
   </section> 
 
-    <!--Error de lista vacia --> 
-    <section *ngIf="articulos.length === 0" class="container-sm">
-      <div class="row">
-        <div class="col">
-          <div class="error">
-            <div class="error__icon">
-                <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z" fill="#393a37"></path></svg>
-            </div>
-            <div class="error__title">Lo sentimos, no hay productos disponibles para mostrar</div>
-          </div>
-        </div>
-      </div>
-    </section>
 </main>
 
 <pagination-controls style="text-align: center;" (pageChange)="p = $event" nextLabel="Siguiente" previousLabel="Anterior"></pagination-controls>

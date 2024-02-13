@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigatorComponent } from '../navigator/navigator.component';
+import { NavigatorComponent } from '../../components/navigator/navigator.component';
 import { articulo } from '../../models/articulo.interface';
 import { ArticlesService } from '../../services/articles.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from '../footer/footer.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-preview',

@@ -1,10 +1,11 @@
 export interface articulo{
-    pathFoto : string;
+    fotos : string[];
     nombre : string;
     //categoria : string[]; //Cambiar por Set<string> en el componente para permitir multiples categorias
-    //coloresDisp : string[]; //Agregar atributo para mostrar los colores disponibles
+    //coloresDisp
     categoria : string;
     precio : number;
     descripcion : string;
+    porEncargue: boolean;
     stock: boolean;
 }

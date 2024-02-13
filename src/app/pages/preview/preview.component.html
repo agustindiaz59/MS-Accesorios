@@ -5,7 +5,26 @@
   <div class="card mb-3 escritorio">
     <div class="row g-0">
       <div class="col-4">
-        <img [src]="articulo?.pathFoto" class="img-fluid rounded-start" alt="...">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div *ngFor="let a of articulo?.fotos">
+              <div *ngIf="articulo?.fotos?.indexOf(a) === 0" class="carousel-item active">
+                <img [src]="a" class="d-block w-100" alt="...">
+              </div>
+              <div *ngIf="articulo?.fotos?.indexOf(a) !== 0" class="carousel-item">
+                <img [src]="a" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
       <div class="col-8">
         <div class="card-body">
@@ -27,13 +46,13 @@
             </svg>
             Retiro en casa
           </h6>
-          <h6 *ngIf="articulo?.stock" class="card-text" style="color: #E4717A;">
+          <h6 *ngIf="!articulo?.porEncargue" class="card-text" style="color: #E4717A;">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
             </svg>
             Disponible para entrega
           </h6>
-          <h6 *ngIf="!articulo?.stock" class="card-text" style="color: #E4717A;">
+          <h6 *ngIf="articulo?.porEncargue" class="card-text" style="color: #E4717A;">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-calendar-heart" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM1 14V4h14v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1m7-6.507c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
             </svg>
@@ -67,7 +86,27 @@
 
   <!--Vista de movil-->
   <div class="card movil mb-3">
-    <img [src]="articulo?.pathFoto" class="card-img-top" alt="...">
+    
+    <div id="carouselExample1" class="carousel slide"> 
+      <div class="carousel-inner">
+        <div *ngFor="let a of articulo?.fotos">
+          <div *ngIf="articulo?.fotos?.indexOf(a) === 0" class="carousel-item active">
+            <img [src]="a" class="d-block w-100" alt="...">
+          </div>
+          <div *ngIf="articulo?.fotos?.indexOf(a) !== 0" class="carousel-item">
+            <img [src]="a" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
         
     <div class="card-body">
       <h1 class="card-title" style="color: palevioletred;">{{articulo?.nombre}}</h1>
@@ -121,6 +160,7 @@
         </button>
       </div>
     </div>
+
   </div>
 </div>
 

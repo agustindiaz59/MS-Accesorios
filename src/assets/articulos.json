@@ -1,21 +1,43 @@
 [
     {
-        "pathFoto": "../assets/articulos/20231001_095507.jpg",
+        "fotos":[
+            "../assets/articulos/20231001_095507.jpg",
+            "../assets/articulos/20230313_175535.jpg",
+            "../assets/articulos/20231011_110559.jpg"
+        ],
         "nombre": "Pulcera Bob Esponja",
         "categoria": "Pulceras",
         "descripcion": "Exclusivas para esa/e amiga/o incondicional 🫂❤️",
-        "precio": 1200
+        "precio": 1200,
+        "stock": true
     },
     {
-        "pathFoto": "../assets/articulos/20231011_110559.jpg",
+        "fotos":[
+           "../assets/articulos/20231001_095507.jpg"
+        ],
+        "nombre": "Pulcera Bob Esponja",
+        "categoria": "Para compartir",
+        "descripcion": "Exclusivas para esa/e amiga/o incondicional 🫂❤️",
+        "precio": 1200,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20231011_110559.jpg",
+            "../assets/articulos/20231010_013900.jpg",
+            "../assets/articulos/20230729_215048.jpg"
+        ],
         "nombre": "Iniciales blanco y negro",
         "categoria": "Para compartir",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
         "precio": 1500,
-        "stock": false
+        "stock": true
     },
     {
-        "pathFoto": "../assets/articulos/20230313_175139.jpg",
+        "fotos":[
+            "../assets/articulos/20230313_175139.jpg",
+            "../assets/articulos/20220611_151351.jpg"
+        ],
         "nombre": "Gargantilla corazón",
         "categoria": "Gargantillas",
         "descripcion": "",
@@ -23,53 +45,146 @@
         "stock": true
     },
     {
-        "pathFoto": "../assets/articulos/20230313_175402.jpg",
+        "fotos":[
+            "../assets/articulos/20230313_175402.jpg"
+        ],
         "nombre": "Collar de caracoles",
         "categoria": "Collares",
         "precio": 2500,
         "stock": true
     },
     {
-        "pathFoto": "../assets/articulos/20230313_175535.jpg",
+        "fotos":[
+            "../assets/articulos/20230313_175535.jpg"
+        ],
         "nombre": "Gargantilla de perlas multicolor",
         "categoria": "Gargantillas",
         "precio": 900,
         "stock": true
     },
     {
-        "pathFoto": "../assets/articulos/20230719_224520.jpg",
+        "fotos":[
+            "../assets/articulos/20230719_224520.jpg"
+        ],
         "nombre": "Rojas de corazón",
         "categoria": "Para compartir",
         "precio": 1500,
         "stock": true
     },
     {
-        "pathFoto": "../assets/articulos/20230823_151242.jpg",
+        "fotos":[
+            "../assets/articulos/20230823_151242.jpg"
+        ],
         "nombre": "Corazon de perlas madre e hija",
         "categoria": "Para compartir",
         "precio": 2000,
-        "stock": false
+        "stock": true
     },
     {
-        "pathFoto": "../assets/articulos/20230828_143738.jpg",
+        "fotos":[
+            "../assets/articulos/20230828_143738.jpg"
+        ],
         "nombre": "Pulceras negras de corazón",
         "categoria": "Para compartir",
+        "descripcion": "",
         "precio": 1500,
-        "stock": false
+        "stock": true
     },
     {
-        "pathFoto": "../assets/articulos/20230928_160829.jpg",
+        "fotos":[
+            "../assets/articulos/20230928_160829.jpg"
+        ],
         "nombre": "Pulceras de voley",
         "categoria": "Para compartir",
         "descripcion": "Ideales para compartir con tu jugador/a favorito ☺️",
         "precio": 1800,
-        "stock": false
+        "stock": true
     },
     {
-        "pathFoto": "../assets/articulos/20231016_154812.jpg",
+        "fotos":[
+            "../assets/articulos/20231016_154812.jpg"
+        ],
         "nombre": "Pulceras de corazon negro y rojo",
         "categoria": "Para compartir",
         "precio": 1500,
-        "stock": false
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20220611_151446.jpg"
+        ],
+        "nombre":"Gargantilla flores multicolor",
+        "categoria": "Gargantillas",
+        "precio": 1500,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20220713_110857.jpg"
+        ],
+        "nombre": "Escandalosos",
+        "categoria": "Para compartir",
+        "precio": 2000,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230823_141916.jpg",
+            "../assets/articulos/20231001_095350.jpg"
+        ],
+        "nombre": "Iniciales con dije de corazón",
+        "categoria": "Para compartir",
+        "precio": 2000,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230722_164906.jpg",
+            "../assets/articulos/20230722_160337.jpg"
+        ],
+        "nombre": "Porta chupete personalizado",
+        "categoria": "Porta chupete",
+        "precio": 2000,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230719_224644.jpg",
+            "../assets/articulos/20230719_224744.jpg",
+            "../assets/articulos/20230719_224538.jpg"
+        ],
+        "nombre": "Pulceras de promesa",
+        "categoria": "Para compartir",
+        "precio": 2000,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230718_201944.jpg",
+            "../assets/articulos/20230719_224613.jpg"
+        ],
+        "nombre": "Chicas superpoderosas",
+        "categoria": "Para compartir",
+        "precio": 2000,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230605_115855.jpg",
+            "../assets/articulos/20230811_014903.jpg"
+        ],
+        "nombre": "Lapiceras con nombre",
+        "categoria": "Lapiceras personalizadas",
+        "precio": 2000,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230801_120505.jpg"
+        ],
+        "nombre": "Amigas vivoras",
+        "categoria": "Para compartir",
+        "precio": 2000,
+        "stock": true
     }
 ]

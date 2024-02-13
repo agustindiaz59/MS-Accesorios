@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { articulo } from '../../models/articulo.interface';
 import { ArticlesService } from '../../services/articles.service';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgPipesModule } from 'ngx-pipes';
@@ -22,42 +21,25 @@ export class ArticlesComponent implements OnInit{
   //Variables de paginacion
   protected p = 1;
   protected tamPage : number = 12;
-  protected articulos : articulo[] = [];
   //Variables del filtro
-  protected filtroKey : string[] = [];
-  protected filtroActivo : string[] = [];
   protected categorias : string[] = categorias;
 
   constructor(@Inject(ArticlesService) protected articulosService : ArticlesService, protected router : Router){}
   
-  ngOnInit(): void {
-    this.articulosService.getArticulos().subscribe(
-      data => {
-        this.articulos = data
-        data.forEach( 
-          (a)=>{
-            if(!categorias.includes(a.categoria)) categorias.push(a.categoria)
-          })
-        this.traerTodo()
-      }
-    )
-  };
+  ngOnInit(): void {};
 
   protected traerTodo(): void{
     this.articulosService.traerTodo();
-    this.filtroKey = this.articulosService.getFiltroKey();
-    this.filtroActivo = this.articulosService.getFiltroActivo();
+    this.p = 1;
   };
 
   protected filtrarPorCategoria(value: string): void{
     this.articulosService.filtrarPorCategoria(value);
-    this.filtroKey = this.articulosService.getFiltroKey();
-    this.filtroActivo = this.articulosService.getFiltroActivo();
+    this.p = 1;
   };
 
   protected filtrarPorPrecio(precioMin : number, precioMax : number): void{
     this.articulosService.filtrarPorPrecio(precioMin, precioMax);
-    this.filtroKey = this.articulosService.getFiltroKey();
-    this.filtroActivo = this.articulosService.getFiltroActivo();
+    this.p = 1;
   }
 };

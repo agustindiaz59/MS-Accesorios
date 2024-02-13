@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { PreviewComponent } from './components/preview/preview.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PreviewComponent } from './pages/preview/preview.component';
 
 export const routes: Routes = [
     {path: 'inicio', component: HomeComponent},
