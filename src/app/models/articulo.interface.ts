@@ -1,7 +1,11 @@
-export class articulo{
-    public pathFoto : string = "";
-    public nombre : string = "";
-    public categoria : string = "";
-    public precio : number = 0;
-    constructor(){}
+export interface articulo{
+    fotos : string[];
+    nombre : string;
+    //categoria : string[]; //Cambiar por Set<string> en el componente para permitir multiples categorias
+    //coloresDisp
+    categoria : string;
+    precio : number;
+    descripcion : string;
+    porEncargue: boolean;
+    stock: boolean;
 }

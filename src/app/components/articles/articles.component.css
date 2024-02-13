@@ -39,7 +39,7 @@
     fill: #71192F;
   }
   
-a:hover {
+a{
   text-decoration: none; /* Eliminar subrayado */
   color: inherit; /* Mantener el color original del texto */
   /* Agrega cualquier otro estilo que desees eliminar o modificar */
