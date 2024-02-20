@@ -1,31 +1,33 @@
 <app-navigator></app-navigator>
 
-<div class="container-sm">
+<main class="container-sm">
   <!--Vista de escritorio-->
-  <div class="card mb-3 escritorio">
-    <div class="row g-0">
+  <section class="card mb-3 escritorio">
+    <article class="row g-0">
+      <!--Carrucel-->
       <div class="col-4">
-        <div id="carouselExample" class="carousel slide">
+        <div id="carouselExample" class="carousel slide" >
           <div class="carousel-inner">
-            <div *ngFor="let a of articulo?.fotos">
+            <picture *ngFor="let a of articulo?.fotos">
               <div *ngIf="articulo?.fotos?.indexOf(a) === 0" class="carousel-item active">
                 <img [src]="a" class="d-block w-100" alt="...">
               </div>
               <div *ngIf="articulo?.fotos?.indexOf(a) !== 0" class="carousel-item">
                 <img [src]="a" class="d-block w-100" alt="...">
               </div>
-            </div>
+            </picture>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <button *ngIf="articulo?.fotos?.length !== 1" class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <button *ngIf="articulo?.fotos?.length !== 1" class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
       </div>
+      <!--Informacion-->
       <div class="col-8">
         <div class="card-body">
           <h1 class="card-title" style="color: palevioletred;">{{articulo?.nombre}}</h1>
@@ -69,10 +71,10 @@
 
           <div style="display: flex; flex-direction: row-reverse;">
             <a href="https://wa.me/+543813931783" class="card-link btn btn-success btn-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-              <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-            </svg>
-            Encargar
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+              </svg>
+              Encargar
             </a>
     
             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#formasDePago">
@@ -81,12 +83,12 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </article>
+  </section>
 
   <!--Vista de movil-->
-  <div class="card movil mb-3">
-    
+  <section class="card movil mb-3">
+    <!--Carrucel-->
     <div id="carouselExample1" class="carousel slide"> 
       <div class="carousel-inner">
         <div *ngFor="let a of articulo?.fotos">
@@ -98,16 +100,16 @@
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+      <button *ngIf="articulo?.fotos?.length !== 1" class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+      <button *ngIf="articulo?.fotos?.length !== 1" class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-        
+    <!--Informacion-->
     <div class="card-body">
       <h1 class="card-title" style="color: palevioletred;">{{articulo?.nombre}}</h1>
       <h3 class="card-text mb-3" style="color: palevioletred;">${{articulo?.precio}}</h3>
@@ -160,12 +162,11 @@
         </button>
       </div>
     </div>
-
-  </div>
-</div>
+  </section>
+</main>
 
 <!--Modal de formas de pago-->
-<div class="modal fade" style="color: palevioletred;" id="formasDePago" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<article class="modal fade" style="color: palevioletred;" id="formasDePago" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -192,7 +193,6 @@
       </div>
     </div>
   </div>
-</div>
-
+</article>
 
 <app-footer></app-footer>

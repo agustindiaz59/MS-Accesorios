@@ -25,28 +25,6 @@ export class ArticlesService{
         this.traerTodo()
       }
     )
-    /* Metodo experimental para agregar una lista de categorias
-    this.getArticulos().subscribe(
-      data => {
-        this.articulos = data
-        let aux : Set<string> = new Set();
-        data.forEach( 
-          (a)=>{
-            a.categoria.forEach(
-              (b)=>{
-                aux.add(b)
-              }
-            )
-          })
-
-        aux.forEach(
-          (a)=>{
-            categorias.push(a)
-          }
-        )
-        this.traerTodo()
-      }
-    )*/
   }
 
   public getArticulos(): Observable<articulo[]>{

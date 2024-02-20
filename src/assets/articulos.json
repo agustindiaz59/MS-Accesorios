@@ -2,13 +2,13 @@
     {
         "fotos":[
             "../assets/articulos/20231001_095507.jpg",
-            "../assets/articulos/20230313_175535.jpg",
-            "../assets/articulos/20231011_110559.jpg"
+            "../assets/articulos/20230202_170014.jpg"
         ],
         "nombre": "Pulcera Bob Esponja",
         "categoria": "Pulceras",
         "descripcion": "Exclusivas para esa/e amiga/o incondicional 🫂❤️",
         "precio": 1200,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -19,6 +19,7 @@
         "categoria": "Para compartir",
         "descripcion": "Exclusivas para esa/e amiga/o incondicional 🫂❤️",
         "precio": 1200,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -31,6 +32,17 @@
         "categoria": "Para compartir",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
         "precio": 1500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230130_161001.jpg"
+        ],
+        "nombre": "La manaos de mi vinito",
+        "categoria": "Para compartir",
+        "precio": 1500,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -42,6 +54,7 @@
         "categoria": "Gargantillas",
         "descripcion": "",
         "precio": 1200,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -51,6 +64,17 @@
         "nombre": "Collar de caracoles",
         "categoria": "Collares",
         "precio": 2500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20221120_152345.jpg"
+        ],
+        "nombre": "Tobillera de caracoles",
+        "categoria": "Tobilleras",
+        "precio": 1300,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -60,6 +84,7 @@
         "nombre": "Gargantilla de perlas multicolor",
         "categoria": "Gargantillas",
         "precio": 900,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -69,6 +94,7 @@
         "nombre": "Rojas de corazón",
         "categoria": "Para compartir",
         "precio": 1500,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -78,16 +104,19 @@
         "nombre": "Corazon de perlas madre e hija",
         "categoria": "Para compartir",
         "precio": 2000,
+        "porEncargue": true,
         "stock": true
     },
     {
         "fotos":[
-            "../assets/articulos/20230828_143738.jpg"
+            "../assets/articulos/20230828_143738.jpg",
+            "../assets/articulos/20230212_072306.jpg"
         ],
-        "nombre": "Pulceras negras de corazón",
+        "nombre": "Pulceras de corazón",
         "categoria": "Para compartir",
         "descripcion": "",
         "precio": 1500,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -98,15 +127,18 @@
         "categoria": "Para compartir",
         "descripcion": "Ideales para compartir con tu jugador/a favorito ☺️",
         "precio": 1800,
+        "porEncargue": true,
         "stock": true
     },
     {
         "fotos":[
-            "../assets/articulos/20231016_154812.jpg"
+            "../assets/articulos/20231016_154812.jpg",
+            "../assets/articulos/20230202_181247.jpg"
         ],
-        "nombre": "Pulceras de corazon negro y rojo",
+        "nombre": "Y si compartimos una pulcerita?",
         "categoria": "Para compartir",
         "precio": 1500,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -116,6 +148,7 @@
         "nombre":"Gargantilla flores multicolor",
         "categoria": "Gargantillas",
         "precio": 1500,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -125,6 +158,7 @@
         "nombre": "Escandalosos",
         "categoria": "Para compartir",
         "precio": 2000,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -135,6 +169,7 @@
         "nombre": "Iniciales con dije de corazón",
         "categoria": "Para compartir",
         "precio": 2000,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -145,6 +180,7 @@
         "nombre": "Porta chupete personalizado",
         "categoria": "Porta chupete",
         "precio": 2000,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -156,6 +192,7 @@
         "nombre": "Pulceras de promesa",
         "categoria": "Para compartir",
         "precio": 2000,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -166,6 +203,7 @@
         "nombre": "Chicas superpoderosas",
         "categoria": "Para compartir",
         "precio": 2000,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -176,6 +214,7 @@
         "nombre": "Lapiceras con nombre",
         "categoria": "Lapiceras personalizadas",
         "precio": 2000,
+        "porEncargue": true,
         "stock": true
     },
     {
@@ -185,6 +224,146 @@
         "nombre": "Amigas vivoras",
         "categoria": "Para compartir",
         "precio": 2000,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20221028_111710.jpg"
+        ],
+        "nombre": "Anillos personalizados",
+        "categoria": "Anillos",
+        "precio": 100,
+        "porEncargue": false,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230201_165305.jpg",
+            "../assets/articulos/20230201_165347.jpg"
+        ],
+        "nombre": "Pulcera ojo turco",
+        "categoria": "Pulceras",
+        "precio": 2000,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230202_170105.jpg",
+            "../assets/articulos/20231001_095350.jpg",
+            "../assets/articulos/20230823_141916.jpg"
+        ],
+        "nombre": "Corazon imantado",
+        "categoria": "Para compartir",
+        "precio": 2500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230201_164955.jpg",
+            "../assets/articulos/20230201_173219.jpg"
+        ],
+        "nombre": "Pulcera Shrek",
+        "categoria": "Pulceras",
+        "precio": 800,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230201_171250.jpg"
+        ],
+        "nombre": "Finn y jake",
+        "categoria": "Para compartir",
+        "precio": 1500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230202_170129.jpg"
+        ],
+        "nombre": "Pulceras intensamente",
+        "categoria": "Para compartir",
+        "precio": 2500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230202_175502.jpg"
+        ],
+        "nombre": "Hilo rojo del destino",
+        "categoria": "Para compartir",
+        "precio": 1500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230212_072248.jpg"
+        ],
+        "nombre": "Pulceras de infinito",
+        "categoria": "Para compartir",
+        "precio": 1500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230213_173331.jpg"
+        ],
+        "nombre": "Pulceritas con dedicatoria",
+        "categoria": "Pulceras",
+        "precio": 2000,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230218_152334.jpg"
+        ],
+        "nombre": "Gargantilla de River",
+        "categoria": "Gargantillas",
+        "precio": 2000,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230218_152246.jpg"
+        ],
+        "nombre": "Gargantilla de Boca",
+        "categoria": "Gargantillas",
+        "precio": 2000,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20230218_152434.jpg",
+            "../assets/articulos/20230218_152527.jpg",
+            "../assets/articulos/20230218_152805.jpg",
+            "../assets/articulos/20230218_152700.jpg",
+            "../assets/articulos/20230218_152619.jpg"
+        ],
+        "nombre": "Colores mixtos",
+        "categoria": "Gargantillas",
+        "precio": 1200,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/20231017_075414.jpg",
+            "../assets/articulos/20220611_151351.jpg"
+        ],
+        "nombre": "Corazon con dedicatoria",
+        "categoria": "Para compartir",
+        "precio": 2000,
+        "porEncargue": true,
         "stock": true
     }
 ]

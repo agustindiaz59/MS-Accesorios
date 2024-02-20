@@ -23,6 +23,7 @@ export class ArticlesComponent implements OnInit{
   protected tamPage : number = 12;
   //Variables del filtro
   protected categorias : string[] = categorias;
+  protected orden : string = "nombre";
 
   constructor(@Inject(ArticlesService) protected articulosService : ArticlesService, protected router : Router){}
   
@@ -41,5 +42,9 @@ export class ArticlesComponent implements OnInit{
   protected filtrarPorPrecio(precioMin : number, precioMax : number): void{
     this.articulosService.filtrarPorPrecio(precioMin, precioMax);
     this.p = 1;
+  }
+  protected ordenarPor(campo: string){
+    this.p = 1;
+    this.orden = campo;
   }
 };
