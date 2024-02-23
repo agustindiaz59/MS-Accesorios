@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PreviewComponent } from './pages/preview/preview.component';
 import { Page404Component } from './pages/page404/page404.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { EdicionComponent } from './pages/edicion/edicion.component';
 
 export const routes: Routes = [
     {path: 'inicio', component: HomeComponent},
@@ -12,5 +13,6 @@ export const routes: Routes = [
     // ruta 404 
     {path:'page404', component: Page404Component},
     {path: '', redirectTo: 'inicio',pathMatch:'full'},
-    {path: '**', redirectTo:'page404'},
+    {path: 'edicion/6744', component: EdicionComponent, pathMatch:'full'},
+    {path: '**', redirectTo:'page404'}
 ];

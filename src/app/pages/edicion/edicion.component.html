@@ -1,0 +1,110 @@
+<app-navigator></app-navigator>
+
+<!--filtros y ordenamiento version de movil-->
+<div class="d-flex justify-content-start mb-1 ps-3">
+
+    <!--Filtros-->
+    <aside class="dropdown movil">
+      <a class="btn movil dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: default; color: deeppink;">
+        Filtrar por
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" (click)="traerTodo()">Mostrar todo</a></li>
+        <li><hr class="dropdown-divider"></li>
+  
+        <li><a class="dropdown-item" style="cursor: default;"><b style="cursor: default; color: deeppink;">Categoria:</b></a></li>
+        <li *ngFor="let categoria of categorias"><a class="dropdown-item" (click)="filtrarPorCategoria(categoria)">{{categoria}}</a></li>
+        
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" style="cursor: default;"><b style="cursor: default; color: deeppink;">Precio:</b></a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorPrecio(100,500)"> $100 ---- $500</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorPrecio(500,1000)">  $500 ---- $1000</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorPrecio(1000,3000)"> $1000 ---- $3000</a></li>
+      </ul>
+    </aside>
+  
+    <!--Ordenamiento-->
+    <aside class="dropdown movil">
+      <a class="btn movil dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: default; color: deeppink;">
+        Ordenar por
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" (click)="ordenarPor('nombre')">Nombre</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" (click)="ordenarPor('precio')">Precio: menor a mayor</a></li>
+        <li><a class="dropdown-item" (click)="ordenarPor('-precio')">Precio: mayor a menor</a></li>
+      </ul>
+    </aside>
+  </div>
+  
+
+<main class="d-flex">
+    <!-- Filtros y ordenamiento version de escritorio--> 
+    <aside class=" mt-5 ms-3 escritorio">
+      <!--Ordenamiento-->
+      <div class="list-group lst mb-4">
+        <b class="list-group-item list-group-item-action" style="cursor: default; color: deeppink;">Ordenar por: </b>
+        <a class="list-group-item list-group-item-action" (click)="ordenarPor('nombre')">Nombre</a>
+  
+        <a class="list-group-item list-group-item-action" (click)="ordenarPor('precio')">Precio: menor a mayor</a>
+        <a class="list-group-item list-group-item-action" (click)="ordenarPor('-precio')">Precio: mayor a menor</a>
+      </div>
+      <!--Filtros-->
+      <div class="list-group lst">
+        <b class="list-group-item list-group-item-action" style="cursor: default; color: deeppink;">Filtrar por: </b>
+        <a class="list-group-item list-group-item-action" (click)="traerTodo()">Mostrar todo</a>
+        <b class="list-group-item list-group-item-action" style="cursor: default; color: deeppink;">Categoria:</b>
+        <div *ngFor="let categoria of categorias">
+          <a class="list-group-item list-group-item-action" (click)="filtrarPorCategoria(categoria)">{{categoria}}</a>
+        </div>         
+        <!--Filtrar por precios-->
+        <div class="dropdown list-group-item">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <b style="color: deeppink;">Precio</b>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" (click)="filtrarPorPrecio(100,500)">$100 ---- $500</a></li>
+            <li><a class="dropdown-item" (click)="filtrarPorPrecio(500,1000)">$500 ---- $1000</a></li>
+            <li><a class="dropdown-item" (click)="filtrarPorPrecio(1000,3000)">$1000 ---- $3000</a></li>
+          </ul>
+        </div>    
+      </div>
+    </aside>
+      
+    <section class="container-sm">
+      <div class="row">
+  
+        <!-- Productos disponibles -->
+        <article *ngFor="let a of this.articulosEditados |
+          filterBy: this.articulosService.filtroKey : this.articulosService.filtroActivo : true| 
+          filterBy: ['stock']:[true]| 
+          orderBy: orden|
+          unique: 'nombre' | 
+          paginate: {itemsPerPage: this.tamPage, currentPage: this.p}" 
+          class="col-3 prod">
+  
+          <!--Producto-->
+            <figure class="card">
+              <img class="card-img-top" [src]="a.fotos[0]"> <!--loading="lazy"--> 
+                <figcaption class="card-body text-center">
+                  <h5 class="card-title"><input type="text" [(ngModel)]="a.nombre"></h5>
+                  <h5><b><input style="text-align: center;" type="text" [(ngModel)]="a.precio"></b></h5>
+                  <h5><input type="checkbox" name="nnn" id="" onclick="a.stock = !a.stock">ssssss</h5>
+                </figcaption> 
+            </figure>
+        </article>
+      </div>
+    </section> 
+  
+  </main>
+  
+  <!--Controles de paginacion-->
+  <pagination-controls style="text-align: center;" (pageChange)="p = $event" nextLabel="Siguiente" previousLabel="Anterior"></pagination-controls>
+
+  <section style="display: flex;flex-direction: row-reverse;">
+    <button class="btn btn-success">Guardar cambios</button>
+    <button class="btn btn-info">Añadir nuevo</button>
+    <button class="btn btn-warning"></button>
+  </section>
+
+<app-footer></app-footer>
