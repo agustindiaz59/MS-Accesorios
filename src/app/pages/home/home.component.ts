@@ -6,6 +6,7 @@ import { BannerComponent } from '../../components/banner/banner.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { NavigatorComponent } from '../../components/navigator/navigator.component';
 import { WarningComponent } from '../../components/warning/warning.component';
+import { SearchResultsComponent } from '../../components/search-results/search-results.component';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,8 @@ import { WarningComponent } from '../../components/warning/warning.component';
     BannerComponent,
     ArticlesComponent,
     FooterComponent,
-    WarningComponent
+    WarningComponent,
+    SearchResultsComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

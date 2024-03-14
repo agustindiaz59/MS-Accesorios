@@ -3,6 +3,7 @@ import { articulo } from '../models/articulo.interface';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { categorias } from '../models/categorias';
+import { subscriptor } from '../models/observer/subscriptor';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class ArticlesService{
   public filtroKey : string[] = [];
   public filtroActivo : string[] = [];
   public articulos : articulo[] = [];
+  private subscriptors : subscriptor[] = []
 
   constructor(private http : HttpClient){
     this.getArticulos().subscribe(
@@ -46,6 +48,7 @@ export class ArticlesService{
 
     this.filtroActivo = [];
     this.filtroActivo.push(value)
+    this.notifySubscriptors()
   };
 
   public filtrarPorPrecio(precioMin : number, precioMax : number): void{
@@ -56,5 +59,34 @@ export class ArticlesService{
     for (let i = precioMin; i < precioMax; i++) {
       this.filtroActivo.push(i.toString())
     }
+    this.notifySubscriptors()
   };
+
+  public buscar(buscado : string){
+    console.log("Buscando elemento 2")
+
+    let aux : articulo[] = []
+
+    aux = this.articulos.filter(
+      (a)=>{
+        a.nombre === buscado || a.categoria === buscado
+      }
+    )
+
+    this.articulos = aux
+    this.notifySubscriptors()
+  };
+
+  // Metodos del patron observer
+  public suscribe(subscriptor : subscriptor){
+    this.subscriptors.push(subscriptor)
+    this.notifySubscriptors()
+  }
+
+  private notifySubscriptors(){
+    this.subscriptors.forEach( (a)=> a.update(this.filtroKey, this.filtroActivo, this.articulos) )
+  }
+  /*
+
+  */
 }
