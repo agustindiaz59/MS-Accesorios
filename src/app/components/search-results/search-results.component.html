@@ -16,15 +16,16 @@
           <div *ngIf="this.buscado.length > 0 ">
             <ul class="ps-0" *ngFor="let a of this.articulos | filterBy: ['nombre'] : [this.buscado] | unique: 'nombre'">
               <a data-bs-dismiss="modal" [routerLink]="'/producto/'+ this.articulos.indexOf(a)" style="text-decoration: none;">
-                <div class="card mb-3" style=" max-height: 130px;">
+                <div class="card mb-3" style=" max-height: 250px;">
                   <div class="row g-0 align-items-center">
-                    <div class="col-2 ">
-                      <img style="max-height: 130px;" [src]="a.fotos[0]" class="img-fluid rounded-start" alt="...">
+                    <div class="col-4">
+                      <img style="max-height: 250px; width: 100%;" [src]="a.fotos[0]" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-8">
                       <div class="card-body">
                         <h5 class="card-title">{{a.nombre}}</h5>
-                        <p class="card-text">{{a.categoria}}</p>
+                        <h6 class="card-text" style="color: gray;"><i>{{a.categoria}}</i></h6>
+                        <h5 class="card-text" style="color: palevioletred;">${{a.precio}}</h5>
                       </div>
                     </div>
                   </div>
