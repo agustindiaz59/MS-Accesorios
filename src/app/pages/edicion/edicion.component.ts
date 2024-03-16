@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { NavigatorComponent } from '../../components/navigator/navigator.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { ArticlesService } from '../../services/articles.service';
@@ -9,6 +9,7 @@ import { Router, RouterModule } from '@angular/router';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgPipesModule } from 'ngx-pipes';
 import { FormsModule } from '@angular/forms';
+import { subscriptor } from '../../models/observer/subscriptor';
 
 @Component({
   selector: 'app-edicion',

@@ -76,7 +76,7 @@
   
         <!-- Productos disponibles -->
         <article *ngFor="let a of this.articulosEditados |
-          filterBy: this.articulosService.filtroKey : this.articulosService.filtroActivo : true| 
+          filterBy: this.filtroKey : this.filtroActivo : true| 
           filterBy: ['stock']:[true]| 
           orderBy: orden|
           unique: 'nombre' | 

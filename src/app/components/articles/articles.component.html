@@ -39,6 +39,7 @@
 <main class="d-flex">
   <!-- Filtros y ordenamiento version de escritorio--> 
   <aside class=" mt-5 ms-3 escritorio">
+    
     <!--Ordenamiento-->
     <div class="list-group lst mb-4">
       <b class="list-group-item list-group-item-action" style="cursor: default; color: deeppink;">Ordenar por: </b>
@@ -47,6 +48,7 @@
       <a class="list-group-item list-group-item-action" (click)="ordenarPor('precio')">Precio: menor a mayor</a>
       <a class="list-group-item list-group-item-action" (click)="ordenarPor('-precio')">Precio: mayor a menor</a>
     </div>
+
     <!--Filtros-->
     <div class="list-group lst">
       <b class="list-group-item list-group-item-action" style="cursor: default; color: deeppink;">Filtrar por: </b>
@@ -54,7 +56,8 @@
       <b class="list-group-item list-group-item-action" style="cursor: default; color: deeppink;">Categoria:</b>
       <div *ngFor="let categoria of categorias">
         <a class="list-group-item list-group-item-action" (click)="filtrarPorCategoria(categoria)">{{categoria}}</a>
-      </div>         
+      </div>   
+
       <!--Filtrar por precios-->
       <div class="dropdown list-group-item">
         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -73,8 +76,8 @@
     <div class="row">
 
       <!-- Productos disponibles -->
-      <article *ngFor="let a of this.articulosService.articulos |
-        filterBy: this.articulosService.filtroKey : this.articulosService.filtroActivo : true| 
+      <article *ngFor="let a of this.articulos |
+        filterBy: this.filtroKey : this.filtroActivo : true |
         filterBy: ['stock']:[true]| 
         orderBy: orden|
         unique: 'nombre' | 
@@ -82,7 +85,7 @@
         class="col-3 prod">
 
         <!--Producto-->
-        <a [routerLink]="'/producto/'+ this.articulosService.articulos.indexOf(a)">
+        <a [routerLink]="'/producto/'+ this.articulos.indexOf(a)">
           <figure class="card">
             <img class="card-img-top" [src]="a.fotos[0]"> <!--loading="lazy"--> 
               <figcaption class="card-body text-center">

@@ -11,9 +11,9 @@ import { subscriptor } from '../models/observer/subscriptor';
 export class ArticlesService{
   private jsonUrl = 'assets/articulos.json'; // Ajusta la ruta según la ubicación de tu archivo JSON
   //Variables del filtro
-  public filtroKey : string[] = [];
-  public filtroActivo : string[] = [];
-  public articulos : articulo[] = [];
+  private filtroKey : string[] = [];
+  private filtroActivo : string[] = [];
+  private articulos : articulo[] = [];
   private subscriptors : subscriptor[] = []
 
   constructor(private http : HttpClient){
@@ -25,6 +25,7 @@ export class ArticlesService{
             if(!categorias.includes(a.categoria)) categorias.push(a.categoria)
           })
         this.traerTodo()
+        this.notifySubscriptors()
       }
     )
   }

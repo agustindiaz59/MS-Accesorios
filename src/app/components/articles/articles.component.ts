@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticlesService } from '../../services/articles.service';
@@ -7,6 +7,8 @@ import { NgPipesModule } from 'ngx-pipes';
 import { Router, RouterModule } from '@angular/router';
 import { categorias } from '../../models/categorias';
 import { Inject } from '@angular/core';
+import { subscriptor } from '../../models/observer/subscriptor';
+import { articulo } from '../../models/articulo.interface';
 
 @Component({
   selector: 'app-articles',
@@ -17,7 +19,7 @@ import { Inject } from '@angular/core';
   styleUrl: './articles.component.css'
 })
 
-export class ArticlesComponent implements OnInit{
+export class ArticlesComponent implements OnInit, subscriptor{
   //Variables de paginacion
   protected p = 1;
   protected tamPage : number = 12;
@@ -25,9 +27,22 @@ export class ArticlesComponent implements OnInit{
   protected categorias : string[] = categorias;
   protected orden : string = "nombre";
 
+  
+  public filtroKey : string[] = [];
+  public filtroActivo : string[] = [];
+  public articulos : articulo[] = [];
+
   constructor(@Inject(ArticlesService) protected articulosService : ArticlesService, protected router : Router){}
   
-  ngOnInit(): void {};
+  update(filtroKey: string[], filtroActivo: string[], articulos: articulo[]): void {
+    this.filtroKey = filtroKey;
+    this.filtroActivo = filtroActivo;
+    this.articulos = articulos;
+  }
+  
+  ngOnInit(): void {
+    this.articulosService.suscribe(this);
+  };
 
   protected traerTodo(): void{
     this.articulosService.traerTodo();
