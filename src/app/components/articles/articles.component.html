@@ -80,9 +80,8 @@
         filterBy: this.filtroKey : this.filtroActivo : true |
         filterBy: ['stock']:[true]| 
         orderBy: orden|
-        unique: 'nombre' | 
         paginate: {itemsPerPage: this.tamPage, currentPage: this.p}" 
-        class="col-3 prod">
+        class="col-3 prod"> <!-- unique: 'nombre' | -->
 
         <!--Producto-->
         <a [routerLink]="'/producto/'+ this.articulos.indexOf(a)">
