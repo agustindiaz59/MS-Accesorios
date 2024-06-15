@@ -12,17 +12,6 @@
     },
     {
         "fotos":[
-            "../assets/articulos/IMG_20240421_172401_HDR.jpg"
-        ],
-        "nombre": "Iniciales blanco ",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
-        "porEncargue": true,
-        "stock": true
-    },
-    {
-        "fotos":[
             "../assets/articulos/IMG_20240421_172456_HDR.jpg"
         ],
         "nombre": "Iniciale y negro",
@@ -255,6 +244,50 @@
     {
         "fotos":[
             "../assets/articulos/IMG_20240421_182743_HDR.jpg"
+        ],
+        "nombre": "Iniciales blanco y negro",
+        "categoria": "Para compartir",
+        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "precio": 1500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/IMG_20240421_182625_HDR.jpg"
+        ],
+        "nombre": "Iniciales blanco y negro",
+        "categoria": "Para compartir",
+        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "precio": 1500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/IMG_20240421_182549_HDR.jpg"
+        ],
+        "nombre": "Iniciales blanco y negro",
+        "categoria": "Para compartir",
+        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "precio": 1500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/IMG_20240421_182424_HDR.jpg"
+        ],
+        "nombre": "Iniciales blanco y negro",
+        "categoria": "Para compartir",
+        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "precio": 1500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/IMG_20240421_182340_HDR.jpg"
         ],
         "nombre": "Iniciales blanco y negro",
         "categoria": "Para compartir",
