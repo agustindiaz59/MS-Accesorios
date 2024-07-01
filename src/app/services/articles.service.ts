@@ -41,6 +41,7 @@ export class ArticlesService{
 
     this.filtroActivo = []
     this.filtroActivo = categorias
+    this.notifySubscriptors()
   };
 
   public filtrarPorCategoria(value: string): void{

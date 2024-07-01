@@ -58,18 +58,18 @@
         <a class="list-group-item list-group-item-action" (click)="filtrarPorCategoria(categoria)">{{categoria}}</a>
       </div>   
 
-      <!--Filtrar por precios
+      <!--Filtrar por precios -->
       <div class="dropdown list-group-item">
         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <b style="color: deeppink;">Precio</b>
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" (click)="filtrarPorPrecio(100,500)">$100 ---- $500</a></li>
-          <li><a class="dropdown-item" (click)="filtrarPorPrecio(500,1000)">$500 ---- $1000</a></li>
-          <li><a class="dropdown-item" (click)="filtrarPorPrecio(1000,3000)">$1000 ---- $3000</a></li>
+          <li><a class="dropdown-item" (click)="filtrarPorPrecio(1000,2499)">$1000 ---- $2499</a></li>
+          <li><a class="dropdown-item" (click)="filtrarPorPrecio(2500,2999)">$2500 ---- $2999</a></li>
+          <li><a class="dropdown-item" (click)="filtrarPorPrecio(3000,4000)">$3000 ---- $4000</a></li>
         </ul>
       </div>    
-      -->
+      
     </div>
   </aside>
     
@@ -90,6 +90,7 @@
             <img class="card-img-top" [src]="a.fotos[0]"> <!--loading="lazy"--> 
               <figcaption class="card-body text-center">
                 <h5 class="card-title">{{a.nombre}}</h5>
+                <h5 style="color: palevioletred">${{a.precio}}</h5>
               </figcaption> 
           </figure>
         </a>

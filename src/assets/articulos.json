@@ -8,16 +8,16 @@
         "descripcion": "Puceras para tus amigos",
         "precio": 5000,
         "porEncargue": false,
-        "stock": false
+        "stock": true
     },
     {
         "fotos":[
             "../assets/articulos/IMG_20240421_172456_HDR.jpg"
         ],
-        "nombre": "Iniciale y negro",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "nombre": "Hilo rojo del destino",
+        "categoria": "Dedicatoria",
+        "descripcion": "Un hilo rojo invisible conecta a aquellos que están destinados a encontrarse, sin importar tiempo, lugar o circunstancias. El hilo se puede estirar o contraer, pero nunca romper",
+        "precio": 3500,
         "porEncargue": true,
         "stock": true
     },
@@ -25,9 +25,9 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_173316_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "nombre": "Ojo turco",
+        "categoria": "Dedicatoria",
+        "descripcion": "El Ojo Turco se conoce, también, con el nombre de nazar y se trata de un amuleto protector que se presenta en forma de una gota plana cuyo interior contiene la forma de un ojo. Este amuleto se suele usar para protegerse de las malas energías, así como del mal de ojo",
         "precio": 1500,
         "porEncargue": true,
         "stock": true
@@ -36,10 +36,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_173332_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y nero",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "nombre": "Oveja arcoiris",
+        "categoria": "Collares",
+        "descripcion": "Se libre de amar a quien quieras y sientete orgulloso de ser quien eres❤️",
+        "precio": 2500,
         "porEncargue": true,
         "stock": true
     },
@@ -47,10 +47,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_173351_HDR.jpg"
         ],
-        "nombre": "Iniciales bly negro",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "nombre": "Hilo rojo del destino con corazon",
+        "categoria": "Dedicatoria",
+        "descripcion": "Un hilo rojo invisible conecta a aquellos que están destinados a encontrarse, sin importar tiempo, lugar o circunstancias. El hilo se puede estirar o contraer, pero nunca romper",
+        "precio": 2500,
         "porEncargue": true,
         "stock": true
     },
@@ -58,10 +58,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_173409_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
+        "nombre": "Goku y Milk",
         "categoria": "Para compartir",
-        "descripcion": "Puces con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "descripcion": "Puceras para compartir con tu Saiyan",
+        "precio": 2500,
         "porEncargue": true,
         "stock": true
     },
@@ -69,10 +69,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_174139_HDR.jpg"
         ],
-        "nombre": "Iniciales bnco y negro",
+        "nombre": "Motomamis",
         "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "descripcion": "Puceras para compartir con tu compañera de dos ruedas 🏍️",
+        "precio": 2500,
         "porEncargue": true,
         "stock": true
     },
@@ -80,10 +80,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_174205_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
+        "nombre": "Hermanos",
         "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "descripcion": "Pulceras para compartir con tus hermanos y hermanos del corazon",
+        "precio": 2500,
         "porEncargue": true,
         "stock": true
     },
@@ -91,10 +91,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_174446_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
+        "nombre": "Madre e hija",
         "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "descripcion": "Pulceras para la persona que siempre te amará",
+        "precio": 2500,
         "porEncargue": true,
         "stock": true
     },
@@ -102,9 +102,9 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_184136_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "nombre": "Dije de llave",
+        "categoria": "Dijes",
+        "descripcion": "Doble dije de acero inoxidable para compartir con el dueño de tu corazon",
         "precio": 1500,
         "porEncargue": true,
         "stock": true
@@ -113,10 +113,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_184145_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "nombre": "Dije de llave y corazon",
+        "categoria": "Dijes",
+        "descripcion": "Dije doble de acero inoxidable para compartir con el dueño de tu corazon❤️🔐",
+        "precio": 2000,
         "porEncargue": true,
         "stock": true
     },
@@ -124,9 +124,9 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_184211_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "nombre": "Dije LOVE",
+        "categoria": "Dijes",
+        "descripcion": "El amor propio es tan importante como el amor hacia los demás",
         "precio": 1500,
         "porEncargue": true,
         "stock": true
@@ -135,10 +135,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_184110_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "nombre": "Dije de llave de corazon",
+        "categoria": "Dijes",
+        "descripcion": "Dos corazones que se complementan uno al otro, dijes de acero inoxidable para compartir",
+        "precio": 2000,
         "porEncargue": true,
         "stock": true
     },
@@ -146,9 +146,9 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_184105_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "nombre": "Dije de buho",
+        "categoria": "Dijes",
+        "descripcion": "Para esa personita con la cabeza siempre en los libros",
         "precio": 1500,
         "porEncargue": true,
         "stock": true
@@ -157,10 +157,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_183858_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "nombre": "Pulceras con inicial",
+        "categoria": "Dedicatoria",
+        "descripcion": "Pulceras personalizadas con la inicial que quieras, para tí o para reglar",
+        "precio": 2500,
         "porEncargue": true,
         "stock": true
     },
@@ -168,10 +168,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_183735_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "nombre": "Piercings",
+        "categoria": "Piercings",
+        "descripcion": "Piercings varios para llevar tu estilo en la piel",
+        "precio": 1000,
         "porEncargue": true,
         "stock": true
     },
@@ -179,8 +179,8 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_183659_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
+        "nombre": "Aritos cruz de Malta",
+        "categoria": "Aritos",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
         "precio": 1500,
         "porEncargue": true,
@@ -190,10 +190,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_183513_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
+        "nombre": "Alianzas de acero inoxidable",
         "categoria": "Para compartir",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "precio": 2000,
         "porEncargue": true,
         "stock": true
     },
@@ -201,10 +201,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_183050_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
+        "nombre": "Collar de perlas y corazones",
+        "categoria": "Collares",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "precio": 2500,
         "porEncargue": true,
         "stock": true
     },
@@ -212,10 +212,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_183023_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
+        "nombre": "Collar de perlas y piedritas",
+        "categoria": "Collares",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "precio": 2500,
         "porEncargue": true,
         "stock": true
     },
@@ -223,10 +223,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_182928_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
+        "nombre": "Collar de caracoles",
+        "categoria": "Collares",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "precio": 3500,
         "porEncargue": true,
         "stock": true
     },
@@ -234,10 +234,10 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_182841_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
+        "nombre": "Collar de perlas colorido",
+        "categoria": "Collares",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "precio": 2500,
         "porEncargue": true,
         "stock": true
     },
@@ -245,43 +245,44 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_182743_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
+        "nombre": "Collar de corazon",
+        "categoria": "Collares",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "precio": 2000,
         "porEncargue": true,
         "stock": true
     },
     {
         "fotos":[
-            "../assets/articulos/IMG_20240421_182625_HDR.jpg"
-        ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
-        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
-        "porEncargue": true,
-        "stock": true
-    },
-    {
-        "fotos":[
+            "../assets/articulos/IMG_20240421_182625_HDR.jpg",
             "../assets/articulos/IMG_20240421_182549_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
+        "nombre": "Collar de estrella de gomita",
+        "categoria": "Collares",
+        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "precio": 3000,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            ""
+        ],
+        "nombre": "a9",
         "categoria": "Para compartir",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
         "precio": 1500,
         "porEncargue": true,
-        "stock": true
+        "stock": false
     },
     {
         "fotos":[
             "../assets/articulos/IMG_20240421_182424_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
+        "nombre": "Tirita colorida",
+        "categoria": "Pulceras para celular",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
-        "precio": 1500,
+        "precio": 2000,
         "porEncargue": true,
         "stock": true
     },
@@ -289,10 +290,32 @@
         "fotos":[
             "../assets/articulos/IMG_20240421_182340_HDR.jpg"
         ],
-        "nombre": "Iniciales blanco y negro",
-        "categoria": "Para compartir",
+        "nombre": "Pulcera de perlas y piedritas",
+        "categoria": "Pulceras",
         "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
         "precio": 1500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/IMG_20240421_181029_HDR.jpg"
+        ],
+        "nombre": "Pulceras de signos",
+        "categoria": "Pulceras",
+        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "precio": 2500,
+        "porEncargue": true,
+        "stock": true
+    },
+    {
+        "fotos":[
+            "../assets/articulos/IMG_20240421_182325_HDR.jpg"
+        ],
+        "nombre": "Pulcera con perla negra",
+        "categoria": "Pulceras",
+        "descripcion": "Puceras con iniciales de esa persona que tanto quieres😘",
+        "precio": 2000,
         "porEncargue": true,
         "stock": true
     }
